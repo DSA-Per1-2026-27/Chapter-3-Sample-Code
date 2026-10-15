@@ -15,3 +15,12 @@ class TestStudent(unittest.TestCase):
         henry_hou = Student("Henry", "Hou")
         henry_james = Student("Henry", "James")
         self.assertFalse(henry_hou == henry_james)
+        # # This is better because it automatically closes the file
+        # with open('filename.txt', 'r') as f:
+        #     lines = f.readlines()
+        # # Than this
+        # f = open('filename.txt', 'r')
+        # lines = f.readlines()
+        # f.close() # A lot of people forget this
+        with self.assertRaises(TypeError):
+            me == 1

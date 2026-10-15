@@ -6,6 +6,6 @@ class Student:
     def __eq__(self, other: "Student") -> bool:
         """Implements == for instances of Student class only."""
         if not isinstance(other, Student):
-            return NotImplemented
+            raise TypeError
         return (self.first_name == other.first_name and 
                 self.last_name == other.last_name)
