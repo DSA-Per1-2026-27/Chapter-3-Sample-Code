@@ -19,4 +19,11 @@ class TestStudent(unittest.TestCase):
         kayley = Student("Kayley", "Xu")
         shirley = Student("Shirley", "Xu")
         self.assertFalse(kayley == shirley)
-        
+        # with open("filename.txt", "r") as f:
+        #     lines = f.readlines()
+        # Equivalent to:
+        # f = open("filename.txt", "r")
+        # lines = f.readlines()
+        # f.close()
+        with self.assertRaises(TypeError):
+            tomas == 1
